@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to vleung.art!
         </h1>
+      </main>
     </div>
   )
 }
