@@ -31,7 +31,7 @@ type NavigationLink = {
 
 const Footer: any = (props: any) => {
   return (
-    <footer className="h-auto flex flex-row justify-evenly">
+    <footer className="h-auto bg-yellow-200 flex flex-row justify-evenly">
       <span className="p-8">footer</span>
     </footer>
   )
@@ -41,14 +41,14 @@ const Layout: any = (props: any) => {
 
 const labels: NavigationLink[] = [
   { name: 'home', url: '/' },
-  { name: 'about', url: '/about' },
+  { name: 'about', url: '/' },
   { name: 'palette', url: '/palette' },
 ]
 
 return (
   <div className="h-full flex flex-col">
     <Header labels={labels} />
-      <div className="w-full bg-yellow-200 flex-grow flex justify-center items-center">
+      <div className="w-full flex-grow flex justify-center items-center">
         {props.children}
       </div>
     <Footer />
