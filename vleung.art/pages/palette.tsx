@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../src/components/layout'
 
-const Home: NextPage = () => {
+const PalettePage: NextPage<APIRequest> = ({data}) => {
   return (
     <div className="h-screen bg-green-200">
       <Head>
@@ -12,14 +12,43 @@ const Home: NextPage = () => {
         <link rel="icon" href="/images/rainbows/rainbow-blue-svgrepo-com.svg" />
       </Head>
       <Layout>
-      <main> 
-        <h1 className="text-9xl"> 
-          Welcome to Palette Generator!
-        </h1>
-      </main>
+        <main> 
+          <h1 className="text-9xl"> 
+            Welcome to Palette Generator!
+          </h1>
+          <div className="flex flex-col items-center">
+            {data.result?.map((color: any) => <span key={color}>{color}</span>)}
+          </div>
+        </main>
       </Layout>
     </div>
   )
 }
 
-export default Home
+type APIRequest = {
+  data: PaletteJSON
+}
+
+type PaletteJSON = {
+  result: number[]
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+  var inputData = {
+    model : "default",
+    input : [[44,43,44],[90,83,82],"N","N","N"]
+  }
+
+  // Fetch data from external API
+  const url = "http://colormind.io/api/";
+  const res = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(inputData)
+  })
+  const data = await res.json()
+
+  return { props: { data } }
+}
+
+export default PalettePage

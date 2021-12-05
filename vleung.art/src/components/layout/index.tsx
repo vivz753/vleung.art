@@ -8,29 +8,48 @@ const styles = {
   ]
 }
 
-const Header: any = (props) => {
-  const labels: string[] = props.labels
+const Header: any = (props: any) => {
+  const labels: NavigationLink[] = props.labels
 
   return (
     <div className="bg-red-500 flex flex-row justify-evenly">
-      {labels.map((label) => <Link href={label}><a className="p-12 text-white bg-green-500 hover:bg-green-600">{label}</a></Link>)}
+      {labels.map((label, i) => 
+        <Link key={i} href={label.url}>
+          <a className="p-12 text-white bg-green-500 hover:bg-green-600">
+            {label.name}
+          </a>
+        </Link>
+      )}
     </div>
   )
-
 }
 
-const Footer: any = (props) => {
+type NavigationLink = {
+  name: string;
+  url: string;
+}
+
+const Footer: any = (props: any) => {
   return (
-    <footer className="h-auto flex flex-row">footer</footer>
+    <footer className="h-auto flex flex-row justify-evenly">
+      <span className="p-8">footer</span>
+    </footer>
   )
 }
-const Layout: any = (props) => { 
-const labels: string[] = ['home', 'about', 'palette']
+
+const Layout: any = (props: any) => { 
+
+const labels: NavigationLink[] = [
+  { name: 'home', url: '/' },
+  { name: 'about', url: '/about' },
+  { name: 'palette', url: '/palette' },
+]
+
 return (
   <div className="h-full flex flex-col">
     <Header labels={labels} />
       <div className="w-full bg-yellow-200 flex-grow flex justify-center items-center">
-      {props.children}
+        {props.children}
       </div>
     <Footer />
   </div>
