@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../src/components/layout'
-import tw, { css } from 'twin.macro'
+import tw from 'twin.macro'
+import { css } from '@emotion/react'
 
 const PalettePage: NextPage<APIRequest> = ({data}) => {
   console.log(data.result);
