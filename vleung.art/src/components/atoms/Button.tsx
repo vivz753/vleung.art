@@ -3,7 +3,7 @@ interface ButtonProps {
   onClick?: any; // function
   children?: any; // React children type? 
 }
-const Button: any = (props: ButtonProps) => {
+const Button: React.FC = (props: ButtonProps) => {
 return (
   <button
     disabled={props.disabled}

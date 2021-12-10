@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../src/components/layout'
+import Rainbow from '../src/components/molecules/Rainbow'
+
 
 const Home: NextPage = () => {
   const title = `Vivian's Shoppe`;
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
         <h1 className="text-5xl"> 
           Welcome to vleung.art!
         </h1>
+        <Rainbow
+
+        />
       </main>
       </Layout>
     </div>
