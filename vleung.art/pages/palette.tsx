@@ -21,14 +21,14 @@ const PalettePage: NextPage<APIRequest> = ({data}) => {
           </h1>
           <div className="flex flex-col items-center">
             <div className="justify-start">
-            {data.result?.map((color: any) =>
-            <div className="flex flex-row">
+            {data.result?.map((color: number[], i: number) =>
+            <div key={i} className="flex flex-row">
               <span
                 css={[
                   bgColors(color),
                   tw`w-8 h-8 mr-4`,
                 ]}
-                key={color}
+                key={i}
               >
               </span>
               <span>{color.join(', ')}</span>
@@ -47,14 +47,16 @@ type APIRequest = {
 }
 
 type PaletteJSON = {
-  result: number[]
+  result: [
+    number[]
+  ]
 }
 
 // This gets called on every request
 export async function getServerSideProps() {
   var inputData = {
     model : "default",
-    input : [[44,43,44],[90,83,82],"N","N","N"]
+    input : ["N", "N", "N","N","N"]
   }
 
   // Fetch data from external API
