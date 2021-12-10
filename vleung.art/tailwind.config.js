@@ -1,7 +1,10 @@
 // tailwind.config.js
 module.exports = {
+  content: [
+    "./pages/**/*.tsx",
+    "./src/**/*.tsx"
+  ],
   purge: [
-    // Use *.tsx if using TypeScript
     './pages/**/*.tsx',
     '.src/**/*.tsx'
   ],
