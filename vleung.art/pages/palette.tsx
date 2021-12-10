@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../src/components/layout'
-import tw from 'twin.macro'
-import { css } from '@emotion/react'
+import tw, { css } from 'twin.macro'
 
 const PalettePage: NextPage<APIRequest> = ({data}) => {
-  console.log(data.result);
+
+  const bgColors = (rgbColor: number[]) => css`background-color: rgb(${rgbColor.join(',')})`;
   return (
     <div className="h-screen">
       <Head>
@@ -25,8 +25,8 @@ const PalettePage: NextPage<APIRequest> = ({data}) => {
             <div className="flex flex-row">
               <span
                 css={[
-                  css`background-color: rgb(${color.join(',')})`,
-                  tw`w-8 h-8 mr-4`
+                  bgColors(color),
+                  tw`w-8 h-8 mr-4`,
                 ]}
                 key={color}
               >

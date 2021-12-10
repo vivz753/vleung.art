@@ -1,4 +1,9 @@
-const Button: any = (props) => {
+interface ButtonProps {
+  disabled?: boolean;
+  onClick?: any; // function
+  children?: any; // React children type? 
+}
+const Button: any = (props: ButtonProps) => {
 return (
   <button
     disabled={props.disabled}
