@@ -1,8 +1,8 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./pages/**/*.tsx",
-    "./src/**/*.tsx"
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   purge: [
     './pages/**/*.tsx',
