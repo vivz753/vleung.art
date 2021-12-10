@@ -5,8 +5,8 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   purge: [
-    './pages/**/*.tsx',
-    '.src/**/*.tsx'
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
