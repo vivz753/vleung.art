@@ -4,6 +4,8 @@ interface ArcProps {
   radius: number,
   startAngle: number,
   endAngle: number,
+  height: number,
+  viewBox: string,
   cssStyle: any // change ? 
 }
 
@@ -39,8 +41,8 @@ const Arc: React.FC<ArcProps> = (props) => {
   }
 
     return (
-        <svg>
-          <path fill="none" stroke="#000" strokeWidth="20"
+        <svg viewBox={props.viewBox} height={props.height}>
+          <path fill="none" stroke="#000" strokeWidth="10"
             d={describeArc(props.x, props.y, props.radius, props.startAngle, props.endAngle)}
             css={[...props.cssStyle]}
            />

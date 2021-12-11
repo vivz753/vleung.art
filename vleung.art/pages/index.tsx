@@ -16,12 +16,10 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
       <main> 
+        <Rainbow />
         <h1 className="text-5xl"> 
           Welcome to vleung.art!
         </h1>
-        <Rainbow
-
-        />
       </main>
       </Layout>
     </div>

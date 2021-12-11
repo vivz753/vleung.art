@@ -13,7 +13,11 @@ const Rainbow: React.FC = (props) => {
       stroke-dashoffset: ${pathLength};
     }
   `
+  // can be prop
+  const height = 50;
 
+  // should be fixed
+  const viewBox = "25 40 250 100";
   const center = 150;
   const r = 100;
   const lArcAngle = 270;
@@ -24,6 +28,8 @@ const Rainbow: React.FC = (props) => {
       <div className="relative">
       <div className="">
         <Arc
+          viewBox={viewBox}
+          height={height}
           x={center}
           y={center}
           radius={r}
@@ -38,6 +44,8 @@ const Rainbow: React.FC = (props) => {
       </div>
       <div className="absolute bottom-0">
         <Arc
+          viewBox={viewBox}
+          height={height}
           x={center}
           y={center}
           radius={r-20}
@@ -52,6 +60,8 @@ const Rainbow: React.FC = (props) => {
       </div>
       <div className="absolute bottom-0">
         <Arc
+          viewBox={viewBox}
+          height={height}
           x={center}
           y={center}
           radius={r-40}
