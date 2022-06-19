@@ -7,20 +7,25 @@ const inputData = {
   model : "default",
   input : ["N", "N", "N","N","N"]
 }
+const url = "http://colormind.io/api/";
+
 
 const PalettePage: NextPage<APIRequest> = ({data}) => {
   const [newData, setNewData] = useState(data)
+  const [loading, setLoading] = useState(false)
 
   const handleClick = async() => {
     // Fetch data from external API
-    const url = "http://colormind.io/api/";
+    setLoading(true)
     const res = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(inputData)
     })
+
     const data = await res.json()
+    setLoading(false)
   
-   setNewData(data)
+    setNewData(data)
   }
 
   const bgColors = (rgbColor: number[]) => css`background-color: rgb(${rgbColor.join(',')})`;
@@ -34,7 +39,7 @@ const PalettePage: NextPage<APIRequest> = ({data}) => {
           <h1 className="text-center"> 
            click the button to generate a random color palette 
           </h1>
-          <button className="bg-yellow-200 hover:bg-yellow-300 rounded-xl mx-auto p-2" onClick={handleClick}>the button</button>
+          <button disabled={loading} className="bg-yellow-200 hover:bg-yellow-300 disabled:bg-red-200 rounded-xl mx-auto p-2" onClick={handleClick}>{loading ? 'loading...' : 'the button'}</button>
           <div className="flex flex-col items-center m-2">
             <div className="justify-start">
             {newData.result?.map((color: number[], i: number) =>
@@ -69,7 +74,6 @@ type PaletteJSON = {
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const url = "http://colormind.io/api/";
   const res = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(inputData)

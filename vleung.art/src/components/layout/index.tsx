@@ -56,7 +56,7 @@ const labels: NavigationLink[] = [
 ]
 
 return (
-  <div className="min-h-screen border-red-500 flex flex-grow flex-col">
+  <div className="relative min-h-screen flex flex-grow flex-col">
     <Header labels={labels} />
       <div className="my-auto w-full justify-center items-center">
         {props.children}
