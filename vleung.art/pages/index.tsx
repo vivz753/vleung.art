@@ -84,7 +84,7 @@ const Modal= forwardRef<HTMLDivElement, ModalProps>( ({ show, onClose, onPrev, o
       {/* <div  ref={ref} className="absolute bg-white rounded-xl inset-14 m-10 bg-contain bg-no-repeat bg-center"  style={{backgroundImage: `url(${imageUrl})`}}>
         {children}
       </div> */}
-      <div className="flex flex-col h-full border relative justify-center items-center">
+      <div className="flex flex-col h-full relative justify-center items-center">
       <button  onClick={onClose} className="shrink-0 absolute top-12 rounded-xl -mt-5 min-w-max p-2 w-8 h-8 bg-black justify-center flex items-center">
         <span className="cursor-pointer w-full text-white">X close</span>
       </button>
