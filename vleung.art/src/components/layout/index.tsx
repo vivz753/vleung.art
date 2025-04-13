@@ -1,70 +1,49 @@
-import Button from '../atoms/Button'
-import tw from 'twin.macro'
-import Link from 'next/link'
-import { FaTwitter, FaInstagram } from 'react-icons/fa'
+import Button from "../atoms/Button"
+import Link from "next/link"
+import { FaInstagram } from "react-icons/fa"
+import { FC } from "react"
 
-const styles = {
-  container: () => [
-    tw`bg-red-500`
-  ]
+type NavigationLink = {
+  name: string
+  url: string
 }
 
-const Header: any = (props: any) => {
-  const labels: NavigationLink[] = props.labels
+const labels: NavigationLink[] = [
+  { name: "portfolio", url: "/" },
+  { name: "about", url: "/about" },
+  { name: "lessons", url: "/lessons" },
+]
 
+const Header: FC = () => {
   return (
-    <div className="p-10 bg-yellow-200 flex flex-row gap-5">
-      {labels.map((label, i) => 
+    <header className="absolute top-0 flex h-[72px] w-full flex-row items-center gap-5 bg-yellow-600 p-10">
+      {labels.map((label, i) => (
         <Link key={i} href={label.url}>
-          <a className="p-4 text-white rounded-xl bg-black hover:bg-gray-900">
-            {label.name}
-          </a>
+          <span className="mx-4 rounded-xl text-white hover:text-yellow-900">{label.name}</span>
         </Link>
-      )}
-    </div>
+      ))}
+    </header>
   )
 }
 
-type NavigationLink = {
-  name: string;
-  url: string;
-}
-
-const Footer: any = (props: any) => {
+const Footer: FC = () => {
   return (
-    <footer className="h-auto p-10 bg-yellow-200 flex flex-row items-center gap-5">
-      <Link href="https://twitter.com/vaginamilktea">
-        <a>
-          <FaTwitter className="w-10 h-10" />
-        </a>
-      </Link>
+    <footer className="absolute bottom-0 flex h-24 w-full flex-row items-center gap-5 bg-yellow-600 p-10">
       <Link href="https://instagram.com/carrotjuicelol">
-        <a>
-          <FaInstagram className="w-10 h-10" />
-        </a>
+        <FaInstagram className="h-10 w-10 text-white hover:text-yellow-800" />
       </Link>
     </footer>
   )
 }
 
-const Layout: any = (props: any) => { 
-
-const labels: NavigationLink[] = [
-  { name: 'home', url: '/' },
-  { name: 'about', url: '/about' },
-  { name: 'palette', url: '/palette' },
-]
-
-return (
-  <div className="relative min-h-screen flex flex-grow flex-col">
-    <Header labels={labels} />
-      <div className="my-auto w-full justify-center items-center">
-        {props.children}
-      </div>
-    <Footer />
-  </div>
-)
-
+const Layout: FC<React.PropsWithChildren> = ({ children }) => {
+  return (
+    <div className="relative flex min-h-screen w-screen flex-grow flex-col justify-center">
+      <Header />
+      <Footer />
+      <div className="h-full w-full pb-24 pt-[72px]">{children}</div>
+    </div>
+  )
 }
 
-export default Layout;
+export default Layout
