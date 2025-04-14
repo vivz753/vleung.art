@@ -4,7 +4,15 @@ import { FC, useState, forwardRef } from "react"
 import clsx from "clsx"
 import Link from "next/link"
 import Image from "next/image"
-import Rainbow from "../src/components/molecules/Rainbow"
+import Rainbow from "@components/molecules/Rainbow"
+import { images, Art } from "@components/ArtWorks"
+import Gallery from "@components/atoms/Gallery"
+import Modal from "@components/atoms/Modal"
+
+const traditionalImages = images.filter((x) => x.medium !== "digital")
+const digitalImages = images.filter((x) => x.medium === "digital")
+console.log("traditional", traditionalImages)
+console.log("digital", digitalImages)
 
 const Home: NextPage = () => {
   const [activeImage, setActiveImage] = useState<Art>(traditionalImages[0])
@@ -14,13 +22,11 @@ const Home: NextPage = () => {
   const onNext = (): void => {
     const currIndex = images.findIndex((i) => i === activeImage)
     const nextIndex = currIndex < images.length - 1 ? currIndex + 1 : 0
-    console.log("setting indx to:", nextIndex)
     setActiveImage(() => images[nextIndex])
   }
   const onPrev = (): void => {
     const currIndex = images.findIndex((i) => i === activeImage)
     const prevIndex = currIndex > 0 ? currIndex - 1 : images.length - 1
-    console.log("setting indx to:", prevIndex)
     setActiveImage(() => images[prevIndex])
   }
 
@@ -98,137 +104,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-interface Art {
-  url: string
-  medium: "oil" | "gouache" | "charcoal" | "pencil" | "marker" | "digital"
-  title: string
-}
-const images: Art[] = [
-  {
-    url: "/images/art/froggy.jpg",
-    medium: "gouache",
-    title: "frog in gouache",
-  },
-  {
-    url: "/images/art/VintageRayCommission.jpg",
-    medium: "gouache",
-    title: "portrait in gouache",
-  },
-  {
-    url: "/images/art/skull.jpg",
-    medium: "marker",
-    title: "skull in marker",
-  },
-  {
-    url: "/images/art/BabyMonkeyPostcard.PNG",
-    medium: "digital",
-    title: "baby moneky in digital",
-  },
-  {
-    url: "/images/art/UtahComic.PNG",
-    medium: "digital",
-    title: "friends in utah in digital",
-  },
-  {
-    url: "/images/art/ravenxstarfire.JPG",
-    medium: "digital",
-    title: "raven and star fire in digital",
-  },
-]
-
-const traditionalImages = images.filter((x) => x.medium !== "digital")
-const digitalImages = images.filter((x) => x.medium === "digital")
-console.log("traditional", traditionalImages)
-console.log("digital", digitalImages)
-
-const Gallery: FC<{ setActiveImage: (image: Art) => void; setShowModal: (show: boolean) => void; images: Art[] }> = ({
-  setActiveImage,
-  setShowModal,
-  images,
-}) => {
-  return (
-    <div className="flex w-full flex-wrap justify-center gap-10">
-      {images.map((image, i) => (
-        <Thumbnail
-          image={image}
-          key={i}
-          onClick={() => {
-            setActiveImage(image)
-            setShowModal(true)
-          }}
-        />
-      ))}
-    </div>
-  )
-}
-
-interface ModalProps {
-  show: boolean
-  onClose: () => void
-  onPrev: () => void
-  onNext: () => void
-  image: Art
-  children?: JSX.Element
-}
-
-const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, onNext, children, image }, ref) => {
-  return (
-    <div className={clsx("fixed top-0 h-full w-screen justify-center", show ? "flex" : "hidden")}>
-      <div className="relative flex h-full w-full items-center justify-center">
-        <div
-          onClick={() => {
-            console.log("clicked")
-            onClose()
-          }}
-          className="absolute h-full w-full bg-black opacity-70"
-        />
-        {/* <div  ref={ref} className="absolute bg-white rounded-xl inset-14 m-10 bg-contain bg-no-repeat bg-center"  style={{backgroundImage: `url(${activeImage})`}}>
-        {children}
-      </div> */}
-        <div className="flex h-full w-full flex-row items-center justify-center border">
-          <div className="relative flex h-full w-full items-center justify-center p-32">
-            <div className="relative flex h-full w-full rounded-lg bg-white">
-              <Image alt={image.title} fill style={{ objectFit: "contain" }} src={image.url} />
-            </div>
-            <button
-              onClick={() => onPrev()}
-              className="absolute left-32 m-4 flex h-8 w-8 min-w-max shrink-0 items-center justify-center rounded-full bg-yellow-600 p-8"
-            >
-              <span className="w-full cursor-pointer text-white">{`< prev`}</span>
-            </button>
-            <button
-              onClick={onClose}
-              className="absolute top-24 -mt-5 flex h-8 w-8 min-w-max shrink-0 items-center justify-center rounded-full bg-yellow-600 p-8"
-            >
-              <span className="w-full cursor-pointer text-white">X close</span>
-            </button>
-            <button
-              onClick={() => onNext()}
-              className="absolute right-32 m-4 flex h-8 w-8 min-w-max shrink-0 items-center justify-center rounded-full bg-yellow-600 p-8"
-            >
-              <span className="w-full cursor-pointer text-white">{`next >`}</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-})
-
-Modal.displayName = "Modal"
-
-const Thumbnail: FC<{ onClick: () => void; image: Art }> = ({ onClick, image }) => {
-  return (
-    <div className="relative block h-64 w-64 transform cursor-pointer rounded-lg bg-white transition duration-150 ease-in-out hover:scale-125">
-      <Image
-        alt={image.title}
-        onClick={onClick}
-        className="contrast-125 filter"
-        src={image.url}
-        style={{ objectFit: "contain" }}
-        fill
-      />
-    </div>
-  )
-}
