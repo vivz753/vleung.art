@@ -4,10 +4,10 @@ import { FC, useState, forwardRef } from "react"
 import clsx from "clsx"
 import Link from "next/link"
 import Image from "next/image"
-import Rainbow from "@components/molecules/Rainbow"
+import Rainbow from "@/src/components/core/Rainbow"
 import { images, Art } from "@components/ArtWorks"
-import Gallery from "@components/atoms/Gallery"
-import Modal from "@components/atoms/Modal"
+import Gallery from "@/src/components/core/Gallery"
+import Modal from "@/src/components/core/Modal"
 
 const traditionalImages = images.filter((x) => x.medium !== "digital")
 const digitalImages = images.filter((x) => x.medium === "digital")
@@ -57,9 +57,8 @@ const Home: NextPage = () => {
             <Link href="#digital" className="w-64 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
               Digital
             </Link>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
-              Lighting Series
-            </button>
+            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">2d</button>
+            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">3d</button>
             {/*  Chat Dialogue */}
             <div className="m-16 flex items-center justify-center">
               <div

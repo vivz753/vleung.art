@@ -1,6 +1,7 @@
-import Button from "../atoms/Button"
+import Button from "../core/Button"
 import Link from "next/link"
 import { FaInstagram } from "react-icons/fa"
+import { MdOutlineMailOutline } from "react-icons/md"
 import { FC } from "react"
 
 type NavigationLink = {
@@ -29,9 +30,14 @@ const Header: FC = () => {
 const Footer: FC = () => {
   return (
     <footer className="absolute bottom-0 flex h-24 w-full flex-row items-center gap-5 bg-yellow-600 p-10">
-      <Link href="https://instagram.com/carrotjuicelol">
-        <FaInstagram className="h-10 w-10 text-white hover:text-yellow-800" />
+      <Link href="vivz753@gmail.com">
+        <MdOutlineMailOutline className="h-10 w-10 text-white hover:text-yellow-800" />
       </Link>
+      <span className="text-white">vivz753@gmail.com</span>
+      <Link href="https://instagram.com/carrotjuicelol">
+        <FaInstagram className="ml-8 h-10 w-10 text-white hover:text-yellow-800" />
+      </Link>
+      <span className="text-white">carrotjuicelol</span>
     </footer>
   )
 }

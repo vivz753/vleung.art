@@ -1,5 +1,5 @@
 import type { NextPage } from "next"
-import Rainbow from "../src/components/molecules/Rainbow"
+import Rainbow from "../src/components/core/Rainbow"
 import Link from "next/link"
 
 const Home: NextPage = () => {
