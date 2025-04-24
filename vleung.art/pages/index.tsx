@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex h-full w-full flex-row">
         {/* Categories */}
-        <div className="flex w-[320px] flex-col">
+        <div className="hidden flex-col sm:w-[320px] lg:flex">
           <div className="sticky top-0 flex flex-col items-center justify-start gap-8 p-20">
             <Link
               href="/#traditional"
@@ -79,17 +79,17 @@ const Home: NextPage = () => {
           <div className="flex h-full w-full" />
         </div>
         {/* Galleries */}
-        <div className="flex h-full w-full items-center justify-center p-8">
-          <div className="flex w-full flex-col items-center">
+        <div className="flex h-full w-full items-center justify-center p-4 sm:p-8">
+          <div className="flex w-full flex-col items-center gap-4 lg:gap-10">
             <Rainbow />
             <span className="text-3xl">Portfolio</span>
 
-            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-20">
-              <h1 id="traditional" className="m-12 text-3xl text-white">
+            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 sm:p-8 lg:p-20">
+              <h1 id="traditional" className="m-8 text-3xl text-white lg:m-12">
                 Traditional
               </h1>
               <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={traditionalImages} />
-              <h1 id="digital" className="m-12 text-3xl text-white">
+              <h1 id="digital" className="m-4 text-3xl text-white sm:m-8 lg:m-12">
                 Digital
               </h1>
               <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={digitalImages} />

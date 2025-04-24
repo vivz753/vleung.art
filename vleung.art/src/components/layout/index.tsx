@@ -47,7 +47,7 @@ const Layout: FC<React.PropsWithChildren> = ({ children }) => {
     <div className="relative flex min-h-screen w-screen flex-grow flex-col justify-center">
       <Header />
       <Footer />
-      <div className="h-full w-full pb-24 pt-[72px]">{children}</div>
+      <div className="h-full min-h-screen w-full pb-24 pt-[72px]">{children}</div>
     </div>
   )
 }

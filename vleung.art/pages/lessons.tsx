@@ -4,13 +4,13 @@ import Image from "next/image"
 
 const Home: NextPage = () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-10 rounded-xl p-20">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-xl p-4 sm:p-10 lg:gap-10 lg:p-20">
       <div className="flex flex-col items-center">
         <Rainbow />
         <span className="text-3xl">Lessons</span>
       </div>
-      <div className="flex w-3/4 flex-wrap items-center gap-16 rounded-xl border border-yellow-700 p-8 text-yellow-900">
-        <div className="relative flex h-96 w-1/3  rounded-lg">
+      <div className="flex w-full flex-wrap items-center gap-8 rounded-xl border border-yellow-700 p-8 text-yellow-900 lg:w-3/4 lg:gap-16">
+        <div className="relative flex h-96 w-full rounded-lg lg:w-1/3">
           <Image
             src="/images/lessons/vivian-painting.jpg"
             alt="Vivian instructing oil painting"
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="flex w-1/2 flex-col gap-5">
+        <div className="flex flex-col gap-5 lg:w-1/2">
           <span className="font-semibold">Overview</span>
           <span className="">
             {`I work with traditional mediums like oil, gouache, and
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             installed, or laptop with drawing tablet and Clip Studio or Adobe Photoshop installed).
           </span>
         </div>
-        <div className="relative flex h-96 w-2/5">
+        <div className="relative flex h-64 w-full sm:h-96 lg:w-2/5">
           <Image
             src="/images/lessons/group-painting.jpg"
             alt="Group oil painting"
@@ -43,20 +43,20 @@ const Home: NextPage = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="flex w-1/2 flex-col gap-5">
+        <div className="flex flex-col gap-5 lg:w-1/2">
           <span className="font-semibold">Prices per month</span>
           <span className="">
-            Oil painting: $180/1 hour session each week for 1 month or $200/1.5 hr session each week for 1 month or
-            $220/2hrs
+            Oil painting: $180/1 hour session each week for 1 month or $220/1.5 hr session each week for 1 month or
+            $240/2 hour session each week for 1 month
           </span>
           <span className="">
-            Drawing (traditional or digital): $140/1 hour session each week for 1 month or $160/1.5 hr session each week
-            for 1 month
+            Drawing (traditional or digital): $140/1 hour session each week for 1 month or $180/1.5 hr session each week
+            for 1 month or $200/2 hr session each week for 1 month
           </span>
           <span className="">$20 off when using cash!</span>
           <span className="font-semibold">Prices per session</span>
-          <span className="">Oil painting: $45/hr or $55/1.5 hrs or $65/2hrs</span>
-          <span className="">Drawing (traditional or digital): $35/hr or $50/1.5 hrs</span>
+          <span className="">Oil painting: $45/hr or $60/1.5 hrs or $70/2hrs</span>
+          <span className="">Drawing (traditional or digital): $35/hr or $50/1.5 hrs or $60/2hrs</span>
           <span className="">$5 off when using cash!</span>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Gallery: FC<{ setActiveImage: (image: Art) => void; setShowModal: (show: b
   images,
 }) => {
   return (
-    <div className="flex w-full flex-wrap justify-center gap-10">
+    <div className="flex w-full flex-wrap justify-center gap-4 md:gap-10">
       {images.map((image, i) => (
         <Thumbnail
           image={image}
