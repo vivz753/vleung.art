@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const About: NextPage = () => {
   return (
-    <div className=" flex h-full justify-center p-8 md:px-20">
+    <div className=" flex h-full justify-center p-8 md:px-12 xl:px-20">
       <div className="grid w-full grid-flow-row items-center justify-center gap-4 rounded-xl md:grid-cols-5 lg:gap-10 xl:w-3/4">
         <div className="justify-centeer flex flex-col items-center md:col-span-2">
           <Rainbow />
@@ -28,8 +28,8 @@ export default About
 
 const SelfPortrait: React.FC = () => {
   return (
-    <div className="flex items-center justify-center rounded-xl bg-yellow-700 p-10 lg:p-20">
-      <div className="relative h-60 w-60 overflow-hidden rounded-xl lg:h-72 lg:w-72">
+    <div className="flex items-center justify-center rounded-xl bg-yellow-700 p-10 lg:p-16 xl:p-20">
+      <div className="relative h-60 w-60 overflow-hidden rounded-xl xl:h-72 xl:w-72">
         <Image alt={"vivian's profile pic"} src={"/images/profile_mimi.jpg"} style={{ objectFit: "cover" }} fill />
       </div>
     </div>
@@ -38,7 +38,7 @@ const SelfPortrait: React.FC = () => {
 
 const BioCard: React.FC = () => {
   return (
-    <div className="flex w-full flex-col rounded-xl border border-yellow-700 p-8 text-yellow-900 lg:w-3/4">
+    <div className="flex w-full flex-col rounded-xl border border-yellow-700 p-8 text-yellow-900 xl:w-3/4">
       <span className="">name:</span>
       <span className="mt-2">vivian leung (she/they)</span>
       <span className="mt-8">bio:</span>
