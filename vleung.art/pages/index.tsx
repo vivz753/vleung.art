@@ -5,19 +5,30 @@ import clsx from "clsx"
 import Link from "next/link"
 import Image from "next/image"
 import Rainbow from "@/src/components/core/Rainbow"
-import { images, Art } from "@components/ArtWorks"
+import { images } from "@components/ArtWorks"
 import Gallery from "@/src/components/core/Gallery"
 import Modal from "@/src/components/core/Modal"
+import { Medium, Art } from "@schemas/global"
 
-const traditionalImages = images.filter((x) => x.medium !== "digital")
-const digitalImages = images.filter((x) => x.medium === "digital")
+const title = `Vivian's Portfolio`
+const traditionalImages = images.filter((x) => x.medium !== Medium.TWOD && x.medium !== Medium.THREED)
+const digitalImages = images.filter((x) => x.medium === Medium.TWOD || x.medium === Medium.THREED)
 console.log("traditional", traditionalImages)
 console.log("digital", digitalImages)
+const traditionalFilters = [Medium.OIL, Medium.GOUACHE, Medium.CHARCOAL]
+const digitalFilters = [Medium.TWOD, Medium.THREED]
+
+function scrollToElement(id: string) {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+}
 
 const Home: NextPage = () => {
+  const [filter, setFilter] = useState<Medium | null>(null)
   const [activeImage, setActiveImage] = useState<Art>(traditionalImages[0])
   const [showModal, setShowModal] = useState(false)
-  const title = `Vivian's Portfolio`
 
   const onNext = (): void => {
     const currIndex = images.findIndex((i) => i === activeImage)
@@ -47,18 +58,39 @@ const Home: NextPage = () => {
             >
               Traditional
             </Link>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">Oil</button>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
-              Gouache
-            </button>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
-              Charcoal
-            </button>
+            {traditionalFilters.map((f) => (
+              <button
+                key={f}
+                onClick={() => {
+                  setFilter(f)
+                  scrollToElement(f)
+                }}
+                className={clsx(
+                  f === filter && "outline outline-2 outline-offset-2 outline-yellow-300",
+                  "ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500"
+                )}
+              >
+                {f}
+              </button>
+            ))}
             <Link href="#digital" className="w-64 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
               Digital
             </Link>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">2d</button>
-            <button className="ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">3d</button>
+            {digitalFilters.map((f) => (
+              <button
+                key={f}
+                onClick={() => {
+                  setFilter(f)
+                  scrollToElement(f)
+                }}
+                className={clsx(
+                  f === filter && "outline outline-2 outline-offset-2 outline-yellow-300",
+                  "ml-8 w-56 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500"
+                )}
+              >
+                {f}
+              </button>
+            ))}
             {/*  Chat Dialogue */}
             <div className="m-16 flex items-center justify-center">
               <div
@@ -88,11 +120,21 @@ const Home: NextPage = () => {
               <h1 id="traditional" className="my-8 text-center text-3xl text-white lg:mb-12 lg:text-left">
                 Traditional
               </h1>
-              <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={traditionalImages} />
+              <Gallery
+                filter={filter}
+                setActiveImage={setActiveImage}
+                setShowModal={setShowModal}
+                images={traditionalImages}
+              />
               <h1 id="digital" className="my-8 text-center text-3xl text-white lg:my-12 lg:text-left">
                 Digital
               </h1>
-              <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={digitalImages} />
+              <Gallery
+                filter={filter}
+                setActiveImage={setActiveImage}
+                setShowModal={setShowModal}
+                images={digitalImages}
+              />
             </div>
           </div>
         </div>
