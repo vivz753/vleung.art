@@ -1,7 +1,7 @@
 import { forwardRef } from "react"
 import clsx from "clsx"
 import Image from "next/image"
-import { Art } from "@components/ArtWorks"
+import { Art } from "@schemas/global"
 
 interface ModalProps {
   show: boolean
