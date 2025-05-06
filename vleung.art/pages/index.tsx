@@ -116,7 +116,7 @@ const Home: NextPage = () => {
             <Rainbow />
             <span className="text-3xl">Portfolio</span>
 
-            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 pb-8 sm:p-8 lg:p-16 xl:p-20">
+            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 pb-8 sm:p-8 lg:p-16">
               <h1 id="traditional" className="my-8 text-center text-3xl text-white lg:mb-12 lg:text-left">
                 Traditional
               </h1>

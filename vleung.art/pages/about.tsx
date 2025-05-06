@@ -6,16 +6,16 @@ import Image from "next/image"
 const About: NextPage = () => {
   return (
     <div className=" flex h-full justify-center p-8 md:px-12 xl:px-20">
-      <div className="grid w-full grid-flow-row items-center justify-center gap-4 rounded-xl md:grid-cols-5 lg:gap-10 xl:w-3/4">
+      <div className="grid w-full grid-flow-row items-center justify-center gap-4 rounded-xl md:grid-cols-5 lg:w-3/4 lg:grid-cols-4 lg:gap-10">
         <div className="justify-centeer flex flex-col items-center md:col-span-2">
           <Rainbow />
           <span className="text-3xl">About</span>
         </div>
-        <div className="grid gap-10 md:col-span-5 md:grid-cols-5">
+        <div className="grid gap-10 md:col-span-5 md:grid-cols-5 lg:col-span-4 lg:grid-cols-4">
           <div className="flex items-center justify-center md:col-span-2">
             <SelfPortrait />
           </div>
-          <div className="flex items-center md:col-span-3">
+          <div className="flex items-center md:col-span-3 lg:col-span-2">
             <BioCard />
           </div>
         </div>

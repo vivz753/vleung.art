@@ -32,13 +32,13 @@ const Footer: FC = () => {
     <footer className="absolute bottom-0 flex h-24 w-full flex-col items-center justify-center gap-4 bg-yellow-600 md:flex-row lg:gap-8 lg:p-10">
       <div className="flex flex-row items-center gap-2">
         <Link href="vivz753@gmail.com">
-          <MdOutlineMailOutline className="h-6 w-6 text-white hover:text-yellow-800 md:h-10 md:w-10" />
+          <MdOutlineMailOutline className="h-6 w-6 text-white hover:text-yellow-800 md:h-8 md:w-8" />
         </Link>
         <span className="text-white">vivz753@gmail.com</span>
       </div>
       <div className="flex flex-row items-center gap-2">
         <Link href="https://instagram.com/carrotjuicelol">
-          <FaInstagram className="h-6 w-6 text-white hover:text-yellow-800 md:h-10 md:w-10" />
+          <FaInstagram className="h-6 w-6 text-white hover:text-yellow-800 md:h-8 md:w-8" />
         </Link>
         <span className="text-white">carrotjuicelol</span>
       </div>
