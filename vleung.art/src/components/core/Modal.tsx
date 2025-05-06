@@ -26,7 +26,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, o
         {/* <div  ref={ref} className="absolute bg-white rounded-xl inset-14 m-10 bg-contain bg-no-repeat bg-center"  style={{backgroundImage: `url(${activeImage})`}}>
         {children}
       </div> */}
-        <div className="flex h-full w-full flex-row items-center justify-center border">
+        <div className="flex h-full w-full flex-row items-center justify-center">
           <div className="relative flex h-full w-full items-center justify-center p-4 md:p-8 lg:p-32">
             <div className="relative flex h-full w-full rounded-lg bg-white">
               <Image alt={image.title} fill style={{ objectFit: "contain" }} src={image.url} />

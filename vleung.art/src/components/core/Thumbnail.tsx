@@ -4,7 +4,7 @@ import { Art } from "@components/ArtWorks"
 
 const Thumbnail: FC<{ onClick: () => void; image: Art }> = ({ onClick, image }) => {
   return (
-    <div className="relative block h-28 w-28 transform cursor-pointer overflow-hidden rounded-lg bg-white transition duration-150 ease-in-out hover:scale-125 md:h-48 md:w-48 lg:h-64 lg:w-64">
+    <div className="relative block h-36 w-36 transform cursor-pointer overflow-hidden rounded-lg bg-white transition duration-150 ease-in-out hover:scale-125 md:h-48 md:w-48 xl:h-64 xl:w-64">
       <Image
         alt={image.title}
         onClick={onClick}

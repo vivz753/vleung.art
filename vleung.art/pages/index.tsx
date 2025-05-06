@@ -84,12 +84,12 @@ const Home: NextPage = () => {
             <Rainbow />
             <span className="text-3xl">Portfolio</span>
 
-            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 sm:p-8 lg:p-20">
-              <h1 id="traditional" className="m-8 text-3xl text-white lg:m-12">
+            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 pb-8 sm:p-8 lg:p-16 xl:p-20">
+              <h1 id="traditional" className="my-8 text-center text-3xl text-white lg:mb-12 lg:text-left">
                 Traditional
               </h1>
               <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={traditionalImages} />
-              <h1 id="digital" className="m-4 text-3xl text-white sm:m-8 lg:m-12">
+              <h1 id="digital" className="my-8 text-center text-3xl text-white lg:my-12 lg:text-left">
                 Digital
               </h1>
               <Gallery setActiveImage={setActiveImage} setShowModal={setShowModal} images={digitalImages} />

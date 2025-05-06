@@ -29,15 +29,19 @@ const Header: FC = () => {
 
 const Footer: FC = () => {
   return (
-    <footer className="absolute bottom-0 flex h-24 w-full flex-row items-center gap-5 bg-yellow-600 p-10">
-      <Link href="vivz753@gmail.com">
-        <MdOutlineMailOutline className="h-10 w-10 text-white hover:text-yellow-800" />
-      </Link>
-      <span className="text-white">vivz753@gmail.com</span>
-      <Link href="https://instagram.com/carrotjuicelol">
-        <FaInstagram className="ml-8 h-10 w-10 text-white hover:text-yellow-800" />
-      </Link>
-      <span className="text-white">carrotjuicelol</span>
+    <footer className="absolute bottom-0 flex h-24 w-full flex-col items-center justify-center gap-4 bg-yellow-600 md:flex-row lg:gap-8 lg:p-10">
+      <div className="flex flex-row items-center gap-2">
+        <Link href="vivz753@gmail.com">
+          <MdOutlineMailOutline className="h-6 w-6 text-white hover:text-yellow-800 md:h-10 md:w-10" />
+        </Link>
+        <span className="text-white">vivz753@gmail.com</span>
+      </div>
+      <div className="flex flex-row items-center gap-2">
+        <Link href="https://instagram.com/carrotjuicelol">
+          <FaInstagram className="h-6 w-6 text-white hover:text-yellow-800 md:h-10 md:w-10" />
+        </Link>
+        <span className="text-white">carrotjuicelol</span>
+      </div>
     </footer>
   )
 }

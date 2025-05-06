@@ -1,9 +1,9 @@
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import '../styles/globals.css'
-import Layout from '../src/components/layout'
+import type { AppProps } from "next/app"
+import Head from "next/head"
+import "../styles/globals.css"
+import Layout from "../src/components/layout"
 
-const title="Vivian's Art"
+const title = "Vivian's Art"
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/images/rainbows/rainbow-blue-svgrepo-com.svg" />
       </Head>
       <Layout>
-      <main className="h-full"> 
-      <Component {...pageProps} />
-      </main>
+        <main className="h-full">
+          <Component {...pageProps} />
+        </main>
       </Layout>
     </>
   )
