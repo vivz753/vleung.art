@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Oil painter, digital artist, cat lover." />
         <link rel="icon" href="/images/rainbows/rainbow-blue-svgrepo-com.svg" />
       </Head>
-      <div className="flex h-full w-full flex-row">
+      <div className="flex h-full w-full flex-row pb-24 pt-[80px]">
         {/* Categories */}
         <div className="hidden flex-col sm:w-[320px] lg:flex">
           <div className="sticky top-0 flex flex-col items-center justify-start gap-8 p-20">
@@ -113,9 +113,10 @@ const Home: NextPage = () => {
         {/* Galleries */}
         <div className="flex h-full w-full items-center justify-center p-4 sm:p-8">
           <div className="flex w-full flex-col items-center gap-4 lg:gap-10">
+            <div className="flex flex-col">
             <Rainbow />
             <span className="text-3xl">Portfolio</span>
-
+            </div>
             <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 pb-8 sm:p-8 lg:p-16">
               <h1 id="traditional" className="my-8 text-center text-3xl text-white lg:mb-12 lg:text-left">
                 Traditional
