@@ -4,11 +4,19 @@ import Rainbow from "../src/components/core/Rainbow"
 
 const Home: NextPage = () => {
   return (
-    <div className="flex h-full min-h-screen w-full flex-col  pb-24 pt-[80px]">
-      <div className="flex flex-col items-center justify-center gap-4 p-4 sm:p-8 lg:gap-10">
-        <div className="flex flex-col items-center">
-          <Rainbow />
-          <span className="text-3xl">Lessons</span>
+    <div className="mb-24 mt-[72px] flex h-full w-full flex-col items-center justify-center gap-4 rounded-xl p-8">
+      <div className="flex flex-col items-center">
+        <Rainbow />
+        <span className="text-3xl">Lessons</span>
+      </div>
+      <div className="flex w-full flex-wrap items-center gap-8 rounded-xl border border-yellow-700 p-8 text-yellow-900 lg:w-3/4 lg:gap-16">
+        <div className="relative flex h-96 w-full rounded-lg lg:w-1/3">
+          <Image
+            src="/images/lessons/vivian-painting.jpg"
+            alt="Vivian instructing oil painting"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
         <div className="flex w-full flex-wrap items-center gap-8 rounded-xl border border-yellow-700 p-8 text-yellow-900 lg:w-3/4 lg:gap-16">
           <div className="relative flex h-96 w-full rounded-lg lg:w-1/3">

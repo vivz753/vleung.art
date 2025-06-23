@@ -5,17 +5,17 @@ import Image from "next/image"
 
 const About: NextPage = () => {
   return (
-    <div className=" flex h-full justify-center p-8 md:px-12 xl:px-20 pb-24 pt-[80px] border">
-      <div className="py-4 sm:py-8 grid w-full grid-flow-row items-center justify-center gap-4 rounded-xl md:grid-cols-5 lg:w-3/4 lg:grid-cols-4 lg:gap-10">
-        <div className="justify-centeer flex flex-col items-center md:col-span-2">
-          <Rainbow />
-          <span className="text-3xl">About</span>
-        </div>
-        <div className="grid gap-10 md:col-span-5 md:grid-cols-5 lg:col-span-4 lg:grid-cols-4">
-          <div className="flex items-center justify-center md:col-span-2">
+    <div className="flex h-full min-h-screen items-center justify-center pb-24 pt-[72px] md:px-12 xl:px-20">
+      <div className="grid w-full grid-flow-row items-center justify-center gap-4 rounded-xl p-4 sm:p-8 md:grid-cols-5 lg:w-3/4 lg:gap-10">
+        <div className="grid gap-10 md:col-span-5 md:grid-cols-5">
+          <div className="flex flex-col items-center justify-center gap-4 md:col-span-2 lg:gap-10">
+            <div className="flex flex-col items-center justify-center md:col-span-2">
+              <Rainbow />
+              <span className="text-3xl">About</span>
+            </div>
             <SelfPortrait />
           </div>
-          <div className="flex items-center md:col-span-3 lg:col-span-2">
+          <div className="flex items-center md:col-span-3">
             <BioCard />
           </div>
         </div>

@@ -43,7 +43,7 @@ const Footer: FC = () => {
 
 const Layout: FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <div className="relative flex w-full flex-col overflow-auto">
+    <div className="relative flex w-full flex-col">
       <Header />
       <Footer />
       <div className="flex h-full min-h-screen">{children}</div>
