@@ -2,11 +2,12 @@
 - [x] add function for filters to highlight specific mediums
 - [ ] add student work & testimonials
 - [x] add contact info
-- [ ] take pics of oil paintings at home
-- [ ] add 3d work
-- [ ] optimize image sizes
+- [x] take pics of oil paintings at home
+- [x] add 3d work
+- [ ] rename artwork titles to be more meaningful
+- [ ] optimize image sizes, add thumbnails and size attributes to images?
 - [x] responsive layout
-- [ ] replace modal buttons w/ icons
+- [x] replace modal buttons w/ icons
 - [x] fix white space on mobile layouts
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
