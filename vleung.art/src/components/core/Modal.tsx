@@ -48,8 +48,8 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, o
               className="absolute left-2 flex min-w-max shrink-0 items-center justify-center p-1 lg:left-12"
             >
               <span className="flex w-full cursor-pointer flex-row items-center text-white">
-                <span className="hidden underline lg:flex">close</span>
                 <XMarkIcon className="mt-1 size-7 text-white" />
+                <span className="hidden underline lg:flex">close</span>
               </span>
             </button>
           </div>
@@ -94,7 +94,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, o
               </div>
               <button
                 onClick={() => onPrev()}
-                className="absolute left-1 flex shrink-0 items-center justify-center bg-white/15 p-2 lg:left-8"
+                className="absolute left-1 flex shrink-0 items-center justify-center bg-black/25 p-2 lg:left-8 lg:bg-white/15"
               >
                 <span className="w-full cursor-pointer text-white">
                   <ChevronLeftIcon className="size-5 text-white lg:size-7" />
@@ -102,7 +102,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, o
               </button>
               <button
                 onClick={() => onNext()}
-                className="absolute right-1 flex min-w-max shrink-0 items-center justify-center bg-white/15 p-2 lg:right-8"
+                className="absolute right-1 flex min-w-max shrink-0 items-center justify-center bg-black/25 p-2 lg:right-8 lg:bg-white/15"
               >
                 <span className="w-full cursor-pointer text-white">
                   <ChevronRightIcon className="size-5 text-white lg:size-7" />
