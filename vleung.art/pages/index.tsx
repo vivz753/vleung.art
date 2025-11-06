@@ -9,6 +9,7 @@ import { projects } from "@components/ArtWorks"
 import Gallery from "@/src/components/core/Gallery"
 import Modal from "@/src/components/core/Modal"
 import { Medium, Art } from "@schemas/global"
+import { scrollToElement } from "@helpers/index"
 
 const title = `Vivian's Portfolio`
 const traditionalProjects = projects.filter((x) => x.medium !== Medium.TWOD && x.medium !== Medium.THREED)
@@ -17,13 +18,6 @@ console.log("traditional", traditionalProjects)
 console.log("digital", digitalProjects)
 const traditionalFilters = [Medium.OIL, Medium.GOUACHE, Medium.CHARCOAL]
 const digitalFilters = [Medium.TWOD, Medium.THREED]
-
-function scrollToElement(id: string) {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" })
-  }
-}
 
 const Home: NextPage = () => {
   const [filter, setFilter] = useState<Medium | null>(null)
