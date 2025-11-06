@@ -86,7 +86,11 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, onClose, onPrev, o
                       ))}
                   </div>
                 </div>
-                {project.content && <div id={contentId}>{project.content}</div>}
+                {project.content && (
+                  <div id={contentId} className="flex h-screen items-center justify-center">
+                    {project.content}
+                  </div>
+                )}
               </div>
               <button
                 onClick={() => onPrev()}

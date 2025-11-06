@@ -2,9 +2,9 @@ import { Medium, Art } from "@schemas/global"
 
 const Content = () => {
   return (
-    <div className="relative my-8 h-[180px] overflow-hidden rounded-lg lg:h-[360px] 2xl:h-[580px]">
+    <div className="relative my-24 h-[240px] w-full overflow-hidden rounded-lg lg:h-[480px] 2xl:h-[580px]">
       <iframe
-        title={"hi"}
+        title={"Italian Foodtruck"}
         width="100%"
         height="100%"
         src={"https://www.youtube.com/embed/cFShsVvz1rc?si=pKr0bT1sVtHWSzt8"}
