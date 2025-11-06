@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export enum Medium {
   // TRADITIONAL
   OIL = "oil",
@@ -14,6 +16,8 @@ export enum Medium {
 
 export interface Art {
   url: string
+  images?: string[]
   medium: Medium
   title: string
+  content?: ReactNode
 }

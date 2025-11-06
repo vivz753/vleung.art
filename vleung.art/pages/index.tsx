@@ -5,16 +5,16 @@ import clsx from "clsx"
 import Link from "next/link"
 import Image from "next/image"
 import Rainbow from "@/src/components/core/Rainbow"
-import { images } from "@components/ArtWorks"
+import { projects } from "@components/ArtWorks"
 import Gallery from "@/src/components/core/Gallery"
 import Modal from "@/src/components/core/Modal"
 import { Medium, Art } from "@schemas/global"
 
 const title = `Vivian's Portfolio`
-const traditionalImages = images.filter((x) => x.medium !== Medium.TWOD && x.medium !== Medium.THREED)
-const digitalImages = images.filter((x) => x.medium === Medium.TWOD || x.medium === Medium.THREED)
-console.log("traditional", traditionalImages)
-console.log("digital", digitalImages)
+const traditionalProjects = projects.filter((x) => x.medium !== Medium.TWOD && x.medium !== Medium.THREED)
+const digitalProjects = projects.filter((x) => x.medium === Medium.TWOD || x.medium === Medium.THREED)
+console.log("traditional", traditionalProjects)
+console.log("digital", digitalProjects)
 const traditionalFilters = [Medium.OIL, Medium.GOUACHE, Medium.CHARCOAL]
 const digitalFilters = [Medium.TWOD, Medium.THREED]
 
@@ -27,18 +27,18 @@ function scrollToElement(id: string) {
 
 const Home: NextPage = () => {
   const [filter, setFilter] = useState<Medium | null>(null)
-  const [activeImage, setActiveImage] = useState<Art>(traditionalImages[0])
+  const [activeProject, setActiveProject] = useState<Art>(traditionalProjects[0])
   const [showModal, setShowModal] = useState(false)
 
   const onNext = (): void => {
-    const currIndex = images.findIndex((i) => i === activeImage)
-    const nextIndex = currIndex < images.length - 1 ? currIndex + 1 : 0
-    setActiveImage(() => images[nextIndex])
+    const currIndex = projects.findIndex((i) => i === activeProject)
+    const nextIndex = currIndex < projects.length - 1 ? currIndex + 1 : 0
+    setActiveProject(() => projects[nextIndex])
   }
   const onPrev = (): void => {
-    const currIndex = images.findIndex((i) => i === activeImage)
-    const prevIndex = currIndex > 0 ? currIndex - 1 : images.length - 1
-    setActiveImage(() => images[prevIndex])
+    const currIndex = projects.findIndex((i) => i === activeProject)
+    const prevIndex = currIndex > 0 ? currIndex - 1 : projects.length - 1
+    setActiveProject(() => projects[prevIndex])
   }
 
   return (
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       <div className="flex h-full min-h-screen w-full flex-row pb-24 pt-[72px]">
         {/* Categories */}
         <div className="hidden flex-col sm:w-[320px] lg:flex">
-          <div className="sticky top-0 flex flex-col items-center justify-start gap-8 p-20">
+          <div className="sticky top-0 flex flex-col items-center justify-start gap-4 p-20">
             <Link
               href="/#traditional"
               className="w-64 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500"
@@ -123,24 +123,30 @@ const Home: NextPage = () => {
               </h1>
               <Gallery
                 filter={filter}
-                setActiveImage={setActiveImage}
+                setActiveProject={setActiveProject}
                 setShowModal={setShowModal}
-                images={traditionalImages}
+                projects={traditionalProjects}
               />
               <h1 id="digital" className="my-8 text-center text-3xl text-white lg:my-12 lg:text-left">
                 Digital
               </h1>
               <Gallery
                 filter={filter}
-                setActiveImage={setActiveImage}
+                setActiveProject={setActiveProject}
                 setShowModal={setShowModal}
-                images={digitalImages}
+                projects={digitalProjects}
               />
             </div>
           </div>
         </div>
       </div>
-      <Modal show={showModal} onClose={() => setShowModal(false)} image={activeImage} onNext={onNext} onPrev={onPrev} />
+      <Modal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        project={activeProject}
+        onNext={onNext}
+        onPrev={onPrev}
+      />
     </>
   )
 }

@@ -3,20 +3,20 @@ import Thumbnail from "@/src/components/core/Thumbnail"
 import { Medium, Art } from "@schemas/global"
 
 const Gallery: FC<{
-  setActiveImage: (image: Art) => void
+  setActiveProject: (project: Art) => void
   setShowModal: (show: boolean) => void
-  images: Art[]
+  projects: Art[]
   filter: Medium | null
-}> = ({ setActiveImage, setShowModal, images, filter }) => {
+}> = ({ setActiveProject, setShowModal, projects, filter }) => {
   return (
     <div className="flex w-full flex-wrap justify-center gap-4 md:gap-10">
-      {images.map((image, i) => (
+      {projects.map((project, i) => (
         <Thumbnail
-          highlight={image.medium === filter}
-          image={image}
+          highlight={project.medium === filter}
+          project={project}
           key={i}
           onClick={() => {
-            setActiveImage(image)
+            setActiveProject(project)
             setShowModal(true)
           }}
         />

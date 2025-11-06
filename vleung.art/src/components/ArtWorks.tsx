@@ -1,6 +1,33 @@
 import { Medium, Art } from "@schemas/global"
-export const images: Art[] = [
+
+const Content = () => {
+  return (
+    <div className="relative my-8 h-[180px] overflow-hidden rounded-lg lg:h-[360px] 2xl:h-[580px]">
+      <iframe
+        title={"hi"}
+        width="100%"
+        height="100%"
+        src={"https://www.youtube.com/embed/cFShsVvz1rc?si=pKr0bT1sVtHWSzt8"}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+}
+export const projects: Art[] = [
   // *** DIGITAL
+  {
+    url: "/images/art/Truck_Daylight_0.png", // thumbnail img (prefer .webp, small size)
+    images: [
+      "/images/art/Truck_Daylight_0.png",
+      "/images/art/Truck_Daylight_1.png",
+      "/images/art/Truck_Nightlight_0.png",
+      "/images/art/Truck_Nightlight_1.png",
+    ], // a collection of images to show process or different angles of the piece
+    medium: Medium.THREED,
+    title: "Italian Foodtruck 3D Model",
+    content: <Content />,
+  },
   {
     url: "/images/art/plein-air-sunny-day_digital.png",
     medium: Medium.TWOD,
@@ -175,4 +202,4 @@ export const images: Art[] = [
   // },
 ]
 
-export default images
+export default projects
