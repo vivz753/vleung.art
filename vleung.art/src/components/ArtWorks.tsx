@@ -105,6 +105,42 @@ export const projects: Art[] = [
   // },
 
   // *** TRADITIONAL
+  // TODO: Add watercolor medium
+  {
+    url: "/images/art/fishingallen-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Fishing with Allen",
+  },
+  {
+    url: "/images/art/halfmoonbaysunset-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Half Moon Bay Sunset",
+  },
+  {
+    url: "/images/art/lassenemeraldlake-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Emerald Lake at Lassen Volcanic Park",
+  },
+  {
+    url: "/images/art/minersloughsunset-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Miner Slough Sunset",
+  },
+  {
+    url: "/images/art/backlit-windoworanges-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Backlit Window & Oranges",
+  },
+  {
+    url: "/images/art/backlit-plantvase-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Backlit Plant vase",
+  },
+  {
+    url: "/images/art/horse-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Horse study",
+  },
   {
     url: "/images/art/stilllife-pumpkininhalercandle-oil.jpg",
     medium: Medium.OIL,
