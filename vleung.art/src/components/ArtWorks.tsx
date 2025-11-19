@@ -106,54 +106,94 @@ export const projects: Art[] = [
 
   // *** TRADITIONAL
   {
+    url: "/images/art/stilllife-pumpkininhalercandle-oil.jpg",
+    medium: Medium.OIL,
+    title: "Still life: Pumpkin, Mask, Candle",
+  },
+  {
+    url: "/images/art/stilllife-vasemangochili-oil.jpg",
+    medium: Medium.OIL,
+    title: "Still life: Vase, Mango, Chili",
+  },
+  {
+    url: "/images/art/stilllife-vasepearapple-oil.jpg",
+    medium: Medium.OIL,
+    title: "Still life: Vase, Pear, Apple",
+  },
+  // {
+  //   url: "/images/art/stilllife-winegudetamapersimmon-oil.jpg",
+  //   medium: Medium.OIL,
+  //   title: "duck in oil",
+  // },
+  // {
+  //   url: "/images/art/stilllife-vaseapplelemon-oil-glazing.jpg",
+  //   medium: Medium.OIL,
+  //   title: "duck in oil",
+  // },
+  // {
+  //   url: "/images/art/stilllife-vaseapplelemon-oil-allaprima.jpg",
+  //   medium: Medium.OIL,
+  //   title: "duck in oil",
+  // },
+  {
+    url: "/images/art/stilllife-femalecast-oil.jpg",
+    medium: Medium.OIL,
+    title: "Female cast",
+  },
+  {
+    url: "/images/art/stilllife-pears-bw.jpg",
+    medium: Medium.OIL,
+    title: "Still life: Pears (black & white)",
+  },
+  {
     url: "/images/art/duck_oil.png",
     medium: Medium.OIL,
-    title: "duck in oil",
+    title: "Duck",
   },
   {
     url: "/images/art/jose-doge_oil.png",
     medium: Medium.OIL,
-    title: "Jose as a doge in oil",
+    title: "Jose as a superior doge",
   },
   {
-    url: "/images/art/banana_oil.png",
+    url: "/images/art/stilllife-banana-oil.png",
     medium: Medium.OIL,
-    title: "banana in oil",
+    title: "Still life: Banana, Cloth, Plushie",
   },
   {
     url: "/images/art/lady-portrait_oil.jpg",
     medium: Medium.OIL,
-    title: "lady portrait in oil",
+    title: "Lady",
   },
   {
     url: "/images/art/mimi-portrait_oil.png",
     medium: Medium.OIL,
-    title: "Mimi portrait in oil",
+    title: "Mimi (my cat)",
   },
   {
     url: "/images/art/playful-cat_oil.png",
     medium: Medium.OIL,
-    title: "playful cat in oil",
+    title: "Playful cat",
   },
   {
     url: "/images/art/gary-gudetama_gouache.png",
     medium: Medium.GOUACHE,
-    title: "Gary and Gudetama in gouache",
+    title: "Gary X Gudetama",
   },
   {
     url: "/images/art/mimi-drop-paint_acrylic.png",
     medium: Medium.ACRYLIC,
-    title: "mimi in acrylic",
+    title: "Psycho Mimi",
   },
   {
     url: "/images/art/ruth-bader-ginsberg_oil.jpg",
     medium: Medium.OIL,
-    title: "Ruth Bader Ginsberg in oil",
+    title: "Ruth Bader Ginsberg",
   },
   {
     url: "/images/art/anthony-bourdain_oil.jpg",
     medium: Medium.OIL,
-    title: "Anthony Bourdain in oil",
+    title: "Anthony Bourdain",
   },
   {
     url: "/images/art/froggy_gouache.jpg",
@@ -173,17 +213,17 @@ export const projects: Art[] = [
   {
     url: "/images/art/child-portrait_charcoal.jpg",
     medium: Medium.CHARCOAL,
-    title: "child portrait in charcoal",
+    title: "Child",
   },
   {
     url: "/images/art/man-portrait_charcoal.png",
     medium: Medium.CHARCOAL,
-    title: "man portrait in charcoal",
+    title: "Man",
   },
   {
     url: "/images/art/nude-model_charcoal.jpg",
     medium: Medium.CHARCOAL,
-    title: "nude model in charcoal",
+    title: "Nude Woman",
   },
   // {
   //   url: "/images/art/old-man_charcoal.jpg",
@@ -193,7 +233,7 @@ export const projects: Art[] = [
   {
     url: "/images/art/teen-portrait_charcoal.jpg",
     medium: Medium.CHARCOAL,
-    title: "teen portrait in charcoal",
+    title: "Teen",
   },
   // {
   //   url: "/images/art/skull.jpg",
