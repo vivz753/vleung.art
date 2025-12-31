@@ -16,7 +16,7 @@ const traditionalProjects = projects.filter((x) => x.medium !== Medium.TWOD && x
 const digitalProjects = projects.filter((x) => x.medium === Medium.TWOD || x.medium === Medium.THREED)
 console.log("traditional", traditionalProjects)
 console.log("digital", digitalProjects)
-const traditionalFilters = [Medium.OIL, Medium.GOUACHE, Medium.CHARCOAL]
+const traditionalFilters = [Medium.OIL, Medium.GOUACHE, Medium.CHARCOAL, Medium.WATERCOLOR]
 const digitalFilters = [Medium.TWOD, Medium.THREED]
 
 const Home: NextPage = () => {

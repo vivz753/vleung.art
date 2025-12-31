@@ -203,52 +203,52 @@ export const projects: Art[] = [
   },
   {
     url: "/images/art/mystilllife-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Still life of 5 personal objects",
   },
   {
     url: "/images/art/sargeantstudy-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Study of Sargeant watercolor",
   },
   {
     url: "/images/art/sushituna-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Tuna Nigiri",
   },
   {
     url: "/images/art/fishingallen-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Fishing with Allen",
   },
   {
     url: "/images/art/halfmoonbaysunset-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Half Moon Bay Sunset",
   },
   {
     url: "/images/art/lassenemeraldlake-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Emerald Lake at Lassen Volcanic Park",
   },
   {
     url: "/images/art/minersloughsunset-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Miner Slough Sunset",
   },
   {
     url: "/images/art/backlit-windoworanges-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Backlit Window & Oranges",
   },
   {
     url: "/images/art/backlit-plantvase-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Backlit Plant vase",
   },
   {
     url: "/images/art/horse-watercolor.jpg",
-    medium: Medium.OIL,
+    medium: Medium.WATERCOLOR,
     title: "Horse study",
   },
   {

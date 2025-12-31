@@ -5,6 +5,7 @@ export enum Medium {
   OIL = "oil",
   PASTEL = "pastel",
   GOUACHE = "gouache",
+  WATERCOLOR = "watercolor",
   CHARCOAL = "charcoal",
   PENCIL = "pencil",
   MARKER = "marker",
