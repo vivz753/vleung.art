@@ -180,6 +180,42 @@ export const projects: Art[] = [
 
   // *** TRADITIONAL
   // TODO: Add watercolor medium
+
+  {
+    url: "/images/art/abandonedhouses-oil.jpg",
+    medium: Medium.OIL,
+    title: "Abandoned houses in Houtong Cat Village",
+  },
+  {
+    url: "/images/art/decayingmotorcycle-oil.jpg",
+    medium: Medium.OIL,
+    title: "Decaying Motorcycle",
+  },
+  {
+    url: "/images/art/catvillage-oil.jpg",
+    medium: Medium.OIL,
+    title: "Cat Village",
+  },
+  {
+    url: "/images/art/landscape-chunkycloud-oil.jpg",
+    medium: Medium.OIL,
+    title: "Landscape study w/ chunky clouds",
+  },
+  {
+    url: "/images/art/mystilllife-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Still life of 5 personal objects",
+  },
+  {
+    url: "/images/art/sargeantstudy-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Study of Sargeant watercolor",
+  },
+  {
+    url: "/images/art/sushituna-watercolor.jpg",
+    medium: Medium.OIL,
+    title: "Tuna Nigiri",
+  },
   {
     url: "/images/art/fishingallen-watercolor.jpg",
     medium: Medium.OIL,
