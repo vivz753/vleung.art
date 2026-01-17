@@ -1,6 +1,48 @@
 import { Medium, Art } from "@schemas/global"
 
-const Content = () => {
+const RobotAwakeningContent = () => {
+  return (
+    <div className="relative my-24 h-[240px] w-full overflow-hidden rounded-lg lg:h-[480px] 2xl:h-[580px]">
+      <iframe
+        title={"Robot Awakening"}
+        width="100%"
+        height="100%"
+        src={"https://www.youtube.com/embed/x_DKgWtJE08"}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+}
+const ToastFactoryContent = () => {
+  return (
+    <div className="relative my-24 h-[240px] w-full overflow-hidden rounded-lg lg:h-[480px] 2xl:h-[580px]">
+      <iframe
+        title={"Toast Factory"}
+        width="100%"
+        height="100%"
+        src={"https://www.youtube.com/embed/SAmBJeq-SA4"}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+}
+const MonsterChestContent = () => {
+  return (
+    <div className="relative my-24 h-[240px] w-full overflow-hidden rounded-lg lg:h-[480px] 2xl:h-[580px]">
+      <iframe
+        title={"Monster Chest"}
+        width="100%"
+        height="100%"
+        src={"https://www.youtube.com/embed/7L7d3MgkgqQ"}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+}
+const ItalianFoodtruckContent = () => {
   return (
     <div className="relative my-24 h-[240px] w-full overflow-hidden rounded-lg lg:h-[480px] 2xl:h-[580px]">
       <iframe
@@ -17,6 +59,38 @@ const Content = () => {
 export const projects: Art[] = [
   // *** DIGITAL
   {
+    url: "/images/art/RobotAwakening_right.png", // thumbnail img (prefer .webp, small size)
+    images: ["/images/art/RobotAwakening_right.png", "/images/art/RobotAwakening_left.png"], // a collection of images to show process or different angles of the piece
+    medium: Medium.THREED,
+    title: "Robot Awakening 3D Model",
+    content: <RobotAwakeningContent />,
+  },
+  {
+    url: "/images/art/ToastFactory_left.png", // thumbnail img (prefer .webp, small size)
+    images: [
+      "/images/art/ToastFactory_left.png",
+      "/images/art/ToastFactory_front.png",
+      "/images/art/ToastFactory_back.png",
+      "/images/art/ToastFactory_right.png",
+    ], // a collection of images to show process or different angles of the piece
+    medium: Medium.THREED,
+    title: "Toast Factory 3D Model",
+    content: <ToastFactoryContent />,
+  },
+  {
+    url: "/images/art/MonsterChest_right1.png", // thumbnail img (prefer .webp, small size)
+    images: [
+      "/images/art/MonsterChest_right0.png",
+      "/images/art/MonsterChest_right1.png",
+      "/images/art/MonsterChest_right2.png",
+      "/images/art/MonsterChest_left.png",
+      "/images/art/MonsterChest_back.png",
+    ], // a collection of images to show process or different angles of the piece
+    medium: Medium.THREED,
+    title: "Monster Chest 3D Model",
+    content: <MonsterChestContent />,
+  },
+  {
     url: "/images/art/Truck_Daylight_0.png", // thumbnail img (prefer .webp, small size)
     images: [
       "/images/art/Truck_Daylight_0.png",
@@ -26,7 +100,7 @@ export const projects: Art[] = [
     ], // a collection of images to show process or different angles of the piece
     medium: Medium.THREED,
     title: "Italian Foodtruck 3D Model",
-    content: <Content />,
+    content: <ItalianFoodtruckContent />,
   },
   {
     url: "/images/art/plein-air-sunny-day_digital.png",
