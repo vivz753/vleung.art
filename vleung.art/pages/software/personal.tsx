@@ -7,7 +7,7 @@ const materialsdesigner = `This proof of concept simulates a tool which can anal
 
 const Personal: NextPage = () => {
   return (
-    <div className="flex h-full min-h-screen w-full justify-center pb-24 pt-[72px]">
+    <div className="flex h-full min-h-screen w-full justify-center pb-24 pt-[72px] my-12">
       <div className="flex w-full max-w-[1024px] flex-col gap-8 px-6 py-8">
         <span className="text-4xl">Personal Projects</span>
         <div className="flex h-full w-full flex-col">

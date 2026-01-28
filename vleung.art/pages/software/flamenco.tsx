@@ -9,7 +9,7 @@ const Flamenco: NextPage = () => {
         <meta name="description" content="Open-source development on Flamenco at Blender by Vivian Leung" />
         <link rel="icon" href="/images/rainbows/rainbow-blue-svgrepo-com.svg" />
       </Head>
-      <div className="flex h-full min-h-screen w-dvw justify-center pb-24 pt-[72px]">
+      <div className="flex h-full min-h-screen w-dvw justify-center pb-24 pt-[72px] my-12">
         <div className="flex w-full max-w-[1024px] flex-col gap-8 px-6 py-8">
           <span className="text-4xl">Open-source development on Flamenco @ Blender</span>
           <div className="flex flex-col gap-2">
