@@ -9,7 +9,7 @@ const Thumbnail: FC<{ onClick: () => void; project: Art; highlight: boolean }> =
       id={project.medium}
       className={clsx(
         "relative block h-36 w-36 transform cursor-pointer overflow-hidden rounded-lg bg-white transition duration-150 ease-in-out hover:scale-110 md:h-48 md:w-48",
-        highlight && "outline outline-4 outline-offset-4 outline-white"
+        highlight && "outline outline-4 lg:outline-8 outline-offset-4 outline-orange-100"
       )}
     >
       <Image
