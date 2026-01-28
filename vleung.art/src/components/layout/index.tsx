@@ -29,14 +29,14 @@ const Header: FC = () => {
 const Footer: FC = () => {
   return (
     <footer className="absolute bottom-0 flex h-24 w-full flex-col items-center justify-center gap-4 bg-yellow-600 md:flex-row lg:gap-8 lg:p-10">
-        <Link className="group flex flex-row items-center gap-2" href="mailto:vivz753@gmail.com">
-          <MdOutlineMailOutline className="h-6 w-6 text-white group-hover:text-yellow-800 md:h-8 md:w-8" />
-          <span className="text-white group-hover:text-yellow-800">vivz753@gmail.com</span>
-        </Link>
-        <Link className="flex group flex-row items-center gap-2" href="https://instagram.com/carrotjuicelol">
-          <FaInstagram className="h-6 w-6 text-white group-hover:text-yellow-800 md:h-8 md:w-8" />
-          <span className="text-white group-hover:text-yellow-800">carrotjuicelol</span>
-        </Link>
+      <Link className="group flex flex-row items-center gap-2" href="mailto:vivz753@gmail.com">
+        <MdOutlineMailOutline className="h-6 w-6 text-white group-hover:text-yellow-800 md:h-8 md:w-8" />
+        <span className="text-white group-hover:text-yellow-800">vivz753@gmail.com</span>
+      </Link>
+      <Link className="group flex flex-row items-center gap-2" href="https://instagram.com/carrotjuicelol">
+        <FaInstagram className="h-6 w-6 text-white group-hover:text-yellow-800 md:h-8 md:w-8" />
+        <span className="text-white group-hover:text-yellow-800">carrotjuicelol</span>
+      </Link>
     </footer>
   )
 }
@@ -46,7 +46,7 @@ const Layout: FC<React.PropsWithChildren> = ({ children }) => {
     <div className="relative flex w-full flex-col">
       <Header />
       <Footer />
-      <div className="flex h-full min-h-screen">{children}</div>
+      <main className="flex h-full min-h-screen">{children}</main>
     </div>
   )
 }

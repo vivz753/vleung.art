@@ -85,6 +85,9 @@ const Home: NextPage = () => {
                 {f}
               </button>
             ))}
+            <Link href="#software" className="w-64 rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-500">
+              Softtware
+            </Link>
             {/*  Chat Dialogue */}
             <div className="m-16 flex items-center justify-center">
               <div
@@ -111,7 +114,7 @@ const Home: NextPage = () => {
               <Rainbow />
               <span className="text-3xl">Portfolio</span>
             </div>
-            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-4 pb-8 sm:p-8 lg:p-16">
+            <div className="flex h-full w-full flex-col justify-center gap-5 rounded-xl bg-yellow-700 p-2 pb-8 sm:p-8 lg:p-16">
               <h1 id="traditional" className="my-8 text-center text-3xl text-white lg:mb-12 lg:text-left">
                 Traditional
               </h1>
@@ -130,6 +133,23 @@ const Home: NextPage = () => {
                 setShowModal={setShowModal}
                 projects={digitalProjects}
               />
+              <h1 id="software" className="my-8 text-center text-3xl text-white lg:my-12 lg:text-left">
+                Software
+              </h1>
+              <div className="flex w-full max-w-[1280px] flex-1 flex-col gap-14">
+                <Link href="/software/flamenco" className="group flex flex-col gap-4">
+                  <div className="drop-shadow-pink-300 h-[180px] w-full rounded-2xl bg-[url(/images/software/flamenco.webp)] bg-cover bg-top bg-no-repeat outline-pink-100 saturate-[.8] transition duration-150 ease-in-out group-hover:scale-105 group-hover:drop-shadow-xl group-hover:saturate-[1] lg:h-[360px]"></div>
+                  <label className="cursor-pointer text-xl font-semibold text-orange-200 group-hover:text-orange-100">
+                    Open-source development on Flamenco @ Blender
+                  </label>
+                </Link>
+                <Link href="/software/personal" className="group flex flex-col gap-4">
+                  <div className="drop-shadow-pink-300 h-[180px] w-full rounded-2xl bg-black bg-[url(/images/software/pumpkin-cat-game.png)] bg-contain bg-top bg-no-repeat outline-pink-100 saturate-[.8] transition duration-150 ease-in-out group-hover:scale-105 group-hover:drop-shadow-xl group-hover:saturate-[1] lg:h-[360px]"></div>
+                  <label className="cursor-pointer text-xl font-semibold text-orange-200 group-hover:text-orange-100">
+                    Personal Projects
+                  </label>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

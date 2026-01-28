@@ -257,6 +257,11 @@ export const projects: Art[] = [
     title: "Still life: Pumpkin, Mask, Candle",
   },
   {
+    url: "/images/art/stilllife-breadglasswine-oil.jpg",
+    medium: Medium.OIL,
+    title: "Still life: Bread, Glass, Wine",
+  },
+  {
     url: "/images/art/stilllife-vasemangochili-oil.jpg",
     medium: Medium.OIL,
     title: "Still life: Vase, Mango, Chili",
